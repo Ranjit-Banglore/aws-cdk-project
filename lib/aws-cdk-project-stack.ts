@@ -25,9 +25,6 @@ export class AwsCdkProjectStack extends cdk.Stack {
 
         table.grantReadWriteData(lambdaFn);
 
-
-        // API Gateway
-
         const api = new apigateway.RestApi(this, 'LambdaApi', {
             restApiName: 'Lambda Dynamo API',
             description: 'API Gateway with Lambda and DynamoDB',
